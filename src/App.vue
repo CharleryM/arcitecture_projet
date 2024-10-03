@@ -1,26 +1,25 @@
 <template>
   <div>
-    <Formulaire />
-    <BarGraph />
+    <nav>
+      <router-link to="/login">Login</router-link>
+      <router-link to="/graph">Graphique</router-link>
+      <router-link to="/form">Formulaire</router-link>
+    </nav>
+    <router-view /> 
   </div>
 </template>
 
 <script>
-import BarGraph from './components/BarGraph.vue';
-import Formulaire from './components/Form.vue'
-
 export default {
   name: 'App',
-  components: {
-    BarGraph,
-    Formulaire
-  }
 }
 </script>
 
 <style scoped>
-h1 {
-  color: #2c3e50;
+nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 </style>
-

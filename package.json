@@ -12,6 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "aws-amplify": "^6.6.3",
     "aws-sdk": "^2.1691.0",
     "chart.js": "^4.4.4",
     "vue": "^3.4.29",

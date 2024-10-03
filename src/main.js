@@ -1,6 +1,20 @@
-import './assets/main.css'
+import './assets/main.css';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './route.js';
+import Amplify from 'aws-amplify';
 
-import { createApp } from 'vue'
-import App from './App.vue'
+const awsConfig = {
+  Auth: {
+      userPoolId: 'eu-north-1_hv0BQsGRy',
+      userPoolWebClientId: '035409775233',
+      region: 'eu-north-1',
+  }
+};
+Amplify.configure(awsConfig);
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(router);
+
+app.mount('#app');
